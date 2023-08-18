@@ -1,0 +1,8 @@
+*.log
+*.txt
+
+.htsecure
+
+/bitrix/*
+/urlrewrite.php
+/upload
