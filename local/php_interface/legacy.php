@@ -14,7 +14,7 @@
  
 define('TEMPLATE_PATH_DEFAULT', '/bitrix/templates/.default');
 
-function test_dump($var, $die = false, $all = false)
+function dumps($var, $die = false, $all = false)
 {
 	global $USER;
 	if( ($USER->GetID() == 1) || ($all == true))

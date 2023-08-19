@@ -13,7 +13,7 @@ input{outline:none !important}
 	padding-top: 14px;
 }
 .hd_header{
-	width:995px;
+	width:1024px;
 	margin:0 auto;
 	height: 144px;
 	position:relative;
@@ -455,7 +455,7 @@ color: #0073A3;
 }
 .main_container.page{padding:39px 0}
 .mn_container{
-	width:990px;
+	width:1024px;
 	margin:0 auto;
 }
 .sb_sidebar{
@@ -1500,7 +1500,7 @@ color: #0073A3;
 }
 .ft_container{
 	margin:0 auto;
-	width:995px;
+	width:1024px;
 }
 .ft_about,
 .ft_catalog,

@@ -89,14 +89,16 @@ Asset::getInstance()->addString('<link href="' . TEMPLATE_PATH_DEFAULT . '/favic
 		</div>
 		
 		<!--- // end header area --->
-		<div class="bc_breadcrumbs">
-			<ul>
-				<li><a href="">Каталог</a></li>
-				<li><a href="">Мебель</a></li>
-				<li><a href="">Выставки и события</a></li>
-			</ul>
-			<div class="clearboth"></div>
-		</div>
+		<?$APPLICATION->IncludeComponent(
+			"bitrix:breadcrumb",
+			"nav",
+			Array(
+				"COMPONENT_TEMPLATE" => "nav",
+				"PATH" => "",
+				"SITE_ID" => "s1",
+				"START_FROM" => "0"
+			)
+		);?>
 		<div class="main_container page">
 			<div class="mn_container">
 				<div class="mn_content">
