@@ -42,10 +42,43 @@ IncludeTemplateLangFile(__FILE__);
 					<!-- vCard        http://help.yandex.ru/webmaster/hcard.pdf      -->
 					<p class="vcard">
 						<span class="adr">
-							<span class="street-address">ул. Летняя стр.12, офис 512</span>
+							<span class="street-address">
+							<?$APPLICATION->IncludeComponent(
+								"bitrix:main.include",
+								"",
+								Array(
+									"AREA_FILE_SHOW" => "file",
+									"AREA_FILE_SUFFIX" => "inc",
+									"EDIT_TEMPLATE" => "",
+									"PATH" => "/include/adress.php"
+								)
+							);?></span>
 						</span>
-						<span class="tel">8 (495) 212-85-06</span>
-						<strong><?=GetMessage('WORKING_TIME_FOOTER')?></strong> <br/> <span class="workhours">ежедневно с 9-00 до 18-00</span><br/>
+						<span class="tel">
+						<?$APPLICATION->IncludeComponent(
+							"bitrix:main.include",
+							"",
+							Array(
+								"AREA_FILE_SHOW" => "file",
+								"AREA_FILE_SUFFIX" => "inc",
+								"EDIT_TEMPLATE" => "",
+								"PATH" => "/include/phone.php"
+							)
+						);?>
+						</span>
+						<strong><?=GetMessage('WORKING_TIME_FOOTER')?></strong> <br/> 
+						<span class="workhours">
+						<?$APPLICATION->IncludeComponent(
+							"bitrix:main.include",
+							"",
+							Array(
+								"AREA_FILE_SHOW" => "file",
+								"AREA_FILE_SUFFIX" => "inc",
+								"EDIT_TEMPLATE" => "",
+								"PATH" => "/include/workingtime.php"
+							)
+						);?>
+						</span><br/>
 					</p>
 					<ul class="ft_solcial">
 						<li><a href="" class="fb"></a></li>
@@ -53,7 +86,18 @@ IncludeTemplateLangFile(__FILE__);
 						<li><a href="" class="ok"></a></li>
 						<li><a href="" class="vk"></a></li>
 					</ul>
-					<div class="ft_copyright"><?=GetMessage('COPYRIGHT')?></div>
+					<div class="ft_copyright">
+					<?$APPLICATION->IncludeComponent(
+						"bitrix:main.include",
+						"",
+						Array(
+							"AREA_FILE_SHOW" => "file",
+							"AREA_FILE_SUFFIX" => "inc",
+							"EDIT_TEMPLATE" => "",
+							"PATH" => "/include/copyright.php"
+						)
+					);?>
+					</div>
 					
 					
 				</div>

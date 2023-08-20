@@ -6,12 +6,44 @@ IncludeTemplateLangFile(__FILE__);
 				<table>
 					<tr>
 						<td rowspan="2" class="hd_companyname">
-							<h1><a href="<?=SITE_DIR?>">Мебельный магазин</a></h1>
-						</td>
+							<!--<h1><a href="<?=SITE_DIR?>">Мебельный магазин</a></h1>-->
+							<h1><?$APPLICATION->IncludeComponent(
+								"bitrix:main.include",
+								"",
+								Array(
+									"AREA_FILE_SHOW" => "file",
+									"AREA_FILE_SUFFIX" => "inc",
+									"EDIT_TEMPLATE" => "",
+									"PATH" => "/include/logo.php"
+								)
+							);?>
+							</h1>
+													</td>
 						<td rowspan="2" class="hd_txarea">
-							<span class="tel">8 (495) 212-85-06</span>	<br/>	
-							<?=GetMessage('WORKING_TIME')?> <span class="workhours">ежедневно с 9-00 до 18-00</span>						
-						</td>
+							<span class="tel"><?$APPLICATION->IncludeComponent(
+								"bitrix:main.include",
+								"",
+								Array(
+									"AREA_FILE_SHOW" => "file",
+									"AREA_FILE_SUFFIX" => "inc",
+									"EDIT_TEMPLATE" => "",
+									"PATH" => "/include/phone.php"
+								)
+							);?>
+							</span>	<br/>	
+							<?=GetMessage('WORKING_TIME')?> <span class="workhours">
+							<?$APPLICATION->IncludeComponent(
+								"bitrix:main.include",
+								"",
+								Array(
+									"AREA_FILE_SHOW" => "file",
+									"AREA_FILE_SUFFIX" => "inc",
+									"EDIT_TEMPLATE" => "",
+									"PATH" => "/include/workingtime.php"
+								)
+							);?>
+							</span>						
+													</td>
 						<td style="width:232px">
 							<form action="">
 								<div class="hd_search_form" style="float:right;">
