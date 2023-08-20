@@ -1,6 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Продукция");
+//$APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");//Убрать цепочку навигации
+print_r($REQUEST, true);
+$APPLICATION->AddChainItem("Пункт 1", "/bitrix/");
 ?><?$APPLICATION->IncludeComponent("bitrix:catalog", ".default", array(
 	"IBLOCK_TYPE" => "products",
 	"IBLOCK_ID" => "2",
@@ -78,4 +81,6 @@ $APPLICATION->SetTitle("Продукция");
 	)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);
+
+?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
