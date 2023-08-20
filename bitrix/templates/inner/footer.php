@@ -21,38 +21,16 @@ IncludeTemplateLangFile(__FILE__);
 							"USE_EXT" => "N"
 						)
 					);?>
-					<div class="sb_nav">
-						<ul>
-							<li class="close"><a href=""><span>Каталог</span></a></li>
-							<li class="close"><a href=""><span>Кухни</span></a></li>
-							<li class="close"><a href=""><span>Гарнитуры</span></a></li>
-							<li class="open current">
-								<span class="sb_showchild"></span>
-								<a href=""><span>Спальни</span></a>
-								<ul>
-									<li><a href="">Одноместрые</a></li>
-									<li><a href="">Двухместные</a></li>
-									<li><a href="">Детские</a></li>
-								</ul>
-							</li>
-							<li class="close"><a href=""><span>Кухни</span></a></li>
-							<li class="close"><a href=""><span>Гарнитуры</span></a></li>
-							<li class="close">
-								<span class="sb_showchild"></span>
-								<a href=""><span>Спальни</span></a>
-								<ul>
-									<li><a href="">Одноместрые</a></li>
-									<li><a href="">Двухместные</a></li>
-									<li><a href="">Детские</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-					<div class="sb_event">
-						<div class="sb_event_header"><h4>Ближайшие события</h4></div>
-						<p><a href="">29 августа 2012, Москва</a></p>
-						<p>Семинар производителей мебели России и СНГ, Обсуждение тенденций.</p>
-					</div>
+					<?$APPLICATION->IncludeComponent(
+						"bitrix:main.include",
+						"",
+						Array(
+							"AREA_FILE_RECURSIVE" => "Y",
+							"AREA_FILE_SHOW" => "sect",
+							"AREA_FILE_SUFFIX" => "event",
+							"EDIT_TEMPLATE" => "",							
+						)
+					);?>					
 					<div class="sb_action">
 						<a href=""><img src="<?=TEMPLATE_PATH_DEFAULT//SITE_TEMPLATE_PATH?>/content/11.png" alt=""/></a>
 						<h4>Акция</h4>
