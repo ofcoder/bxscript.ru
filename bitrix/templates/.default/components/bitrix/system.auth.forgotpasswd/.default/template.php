@@ -6,7 +6,7 @@ if (!empty($arParams["~AUTH_RESULT"]))
 }
 
 ?>
-564564564
+
 <form name="bform" method="post" target="_top" action="<?=$arResult["AUTH_URL"]?>">
 <?
 if ($arResult["BACKURL"] <> '')

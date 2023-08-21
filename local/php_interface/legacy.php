@@ -13,6 +13,8 @@
  */
  
 define('TEMPLATE_PATH_DEFAULT', '/bitrix/templates/.default');
+define("LOG_FILENAME", $_SERVER["DOCUMENT_ROOT"]."/log_file.txt");
+define("ERROR_EMAIL", "ofcoder@yandex.ru");
 
 function dumps($var, $die = false, $all = false)
 {

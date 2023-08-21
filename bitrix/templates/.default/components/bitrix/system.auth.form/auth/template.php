@@ -4,10 +4,14 @@ CJSCore::Init();
 ?>
 
 <?
-if ($arResult['SHOW_ERRORS'] === 'Y' && $arResult['ERROR'] && !empty($arResult['ERROR_MESSAGE']))
+if ($arResult['SHOW_ERRORS'] === 'Y' && $arResult['ERROR'] && !empty($arResult['ERROR_MESSAGE']) && $arResult['ERROR_MESSAGE']['TYPE'] === "ERROR")
 {
 	ShowMessage($arResult['ERROR_MESSAGE']);
+	AddMessage2Log(print_r($arResult['ERROR_MESSAGE'], true));
+	SendError(print_r($arResult['ERROR_MESSAGE'], true) . "\n");
 }
+
+
 ?>
 
 <?if($arResult["FORM_TYPE"] == "login"):
