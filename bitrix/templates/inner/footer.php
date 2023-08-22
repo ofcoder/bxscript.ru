@@ -6,21 +6,24 @@ IncludeTemplateLangFile(__FILE__);
 				</div>
 				<div class="sb_sidebar">
 					<?$APPLICATION->IncludeComponent(
-						"bitrix:menu",
-						"sidebar_menu",
-						Array(
-							"ALLOW_MULTI_SELECT" => "N",
-							"CHILD_MENU_TYPE" => "left",
-							"DELAY" => "N",
-							"MAX_LEVEL" => "3",
-							"MENU_CACHE_GET_VARS" => array(""),
-							"MENU_CACHE_TIME" => "3600",
-							"MENU_CACHE_TYPE" => "N",
-							"MENU_CACHE_USE_GROUPS" => "Y",
-							"ROOT_MENU_TYPE" => "left",
-							"USE_EXT" => "N"
-						)
-					);?>
+	"bitrix:menu", 
+	"sidebar_menu", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "3",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "left",
+		"USE_EXT" => "Y",
+		"COMPONENT_TEMPLATE" => "sidebar_menu"
+	),
+	false
+);?>
 					<?$APPLICATION->IncludeComponent(
 						"bitrix:main.include",
 						"",

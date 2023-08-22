@@ -1,34 +1,14 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-<!--<div class="sb_nav">
-						<ul>
-							<li class="close"><a href=""><span>Каталог</span></a></li>
-							<li class="close"><a href=""><span>Кухни</span></a></li>
-							<li class="close"><a href=""><span>Гарнитуры</span></a></li>
-							<li class="open current">
-								<span class="sb_showchild"></span>
-								<a href=""><span>Спальни</span></a>
-								<ul>
-									<li><a href="">Одноместрые</a></li>
-									<li><a href="">Двухместные</a></li>
-									<li><a href="">Детские</a></li>
-								</ul>
-							</li>
-							<li class="close"><a href=""><span>Кухни</span></a></li>
-							<li class="close"><a href=""><span>Гарнитуры</span></a></li>
-							<li class="close">
-								<span class="sb_showchild"></span>
-								<a href=""><span>Спальни</span></a>
-								<ul>
-									<li><a href="">Одноместрые</a></li>
-									<li><a href="">Двухместные</a></li>
-									<li><a href="">Детские</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div>-->
-
 
 <?if (!empty($arResult)):?>
+<style>
+.sb_nav .close{
+	float:none;
+	opacity:1;
+	font-weight:normal;
+}
+</style>
+
 <div class="sb_nav">
 <ul>
 
@@ -59,7 +39,7 @@ foreach($arResult as $arItem):?>
 		<?if ($arItem["PERMISSION"] > "D"):?>
 
 			<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-				<li <?if ($arItem["SELECTED"]):?>class="current"<?endif?>>					
+				<li class="<?=$arItem["SELECTED"]?"current":"close"?>">					
 					<a href="<?=$arItem["LINK"]?>"><span><?=$arItem["TEXT"]?></span></a></li>
 			<?else:?>
 				<li><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
