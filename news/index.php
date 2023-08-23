@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Новости");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	".default", 
+	"news", 
 	array(
 		"IBLOCK_TYPE" => "news",
 		"IBLOCK_ID" => "1",
@@ -39,7 +39,7 @@ $APPLICATION->SetTitle("Новости");
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"USE_PERMISSIONS" => "N",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"LIST_ACTIVE_DATE_FORMAT" => "j M Y",
 		"LIST_FIELD_CODE" => array(
 			0 => "",
 			1 => "",
@@ -53,7 +53,7 @@ $APPLICATION->SetTitle("Новости");
 		"META_KEYWORDS" => "-",
 		"META_DESCRIPTION" => "-",
 		"BROWSER_TITLE" => "-",
-		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"DETAIL_ACTIVE_DATE_FORMAT" => "d.M.Y",
 		"DETAIL_FIELD_CODE" => array(
 			0 => "",
 			1 => "",
@@ -76,7 +76,7 @@ $APPLICATION->SetTitle("Новости");
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "3600",
 		"PAGER_SHOW_ALL" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
-		"COMPONENT_TEMPLATE" => ".default",
+		"COMPONENT_TEMPLATE" => "news",
 		"USE_REVIEW" => "N",
 		"SET_LAST_MODIFIED" => "N",
 		"ADD_ELEMENT_CHAIN" => "N",
