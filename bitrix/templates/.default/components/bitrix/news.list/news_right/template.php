@@ -22,10 +22,10 @@ $this->setFrameMode(true);
 <?foreach($arResult["ITEMS"] as $arItem):?>	
 	<li>		
 		<?if($arParams["DISPLAY_DATE"]!="N" && $arItem["DISPLAY_ACTIVE_FROM"]):?>
-			<h4><a href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><?echo $arItem["DISPLAY_ACTIVE_FROM"]?></a></h4>
+			<h4><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["DISPLAY_ACTIVE_FROM"]?></a></h4>
 		<?endif?>
 		<?if($arParams["DISPLAY_NAME"]!="N" && $arItem["NAME"]):?>
-			<p><?echo $arItem["NAME"]?></p>		
+			<p><?=$arItem["NAME"]?></p>		
 		<?endif;?>		
 	</li>
 <?endforeach;?>
